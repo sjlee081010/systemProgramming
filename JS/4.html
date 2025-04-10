@@ -5,34 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB - JavaScript</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./colors.js"></script>
 </head>
 <body>
-    <script>
-        function nightDayHandler(self){
-            var target = document.querySelector('body');
-            if(self.value === 'night'){
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
-                self.value = 'day';
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while(i < alist.length){
-                    alist[i].style.color = 'powderblue';
-                    i = i + 1;
-                }
-            } else {
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
-                self.value = 'night';
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while(i < alist.length){
-                    alist[i].style.color = 'blue';
-                    i = i + 1;
-                }
-            }
-          }
-    </script>
     <h1><a href="./index.html">WEB</a></h1>
     <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
     <ol>
